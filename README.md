@@ -20,5 +20,5 @@ A **Goroutine**
 * Is generally more memory efficient than threads are, but with some overhead associated to manage stack space
 * Is managed by the go runtime
     * Go has threads as well, but manages the mapping of the goroutines onto the operating system threads for you.
-    * Allows you to create many more goroutines than threas 
+    * Allows you to create many more goroutines than threads 
     * The runtime provides an interface allowing a relatively small number of threads to work with all of those goroutines. And then the runtime schedules those goroutines onto the threads as they have things to do.
