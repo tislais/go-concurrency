@@ -32,7 +32,7 @@ func main() {
 			}
 		}(id)
 
-		// Ff we comment out the sleep here, we get no result when running the app
+		// If we comment out the sleep here, we get no result when running the app
 		// because the main function doesnt have anything to pause itself.
 		// So while it is generating 20 goroutines, there isnt enough time for
 		// those goroutines to return.
@@ -41,7 +41,7 @@ func main() {
 		// The sleep call gives time for the goroutine to finish.
 		// Although we may not get all 20 because the last two goroutines aren't
 		// going to have time to execute.
-		// time.Sleep(150 * time.Millisecond)
+		time.Sleep(150 * time.Millisecond)
 	}
 
 	// guarantees all 20 goroutines will have time to execute, assuming they take less than 2s
